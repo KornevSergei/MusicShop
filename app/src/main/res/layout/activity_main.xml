@@ -23,6 +23,7 @@
 
 
     <TextView
+        android:id="@+id/choiceTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="end"
@@ -87,9 +88,9 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/quantityTitleTextView"
+            android:layout_margin="10dp"
             android:layout_toRightOf="@+id/minusButton"
             android:text="0"
-            android:layout_margin="10dp"
             android:textSize="40sp"
             android:textStyle="bold" />
 
@@ -97,9 +98,10 @@
             android:id="@+id/plusButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_toRightOf="@id/quantityTextView"
             android:layout_below="@+id/quantityTitleTextView"
+            android:layout_toRightOf="@id/quantityTextView"
             android:background="@color/colorBrown"
+            android:onClick="increaseQuantity"
             android:text=" + " />
 
     </RelativeLayout>
