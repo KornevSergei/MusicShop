@@ -13,7 +13,8 @@
         android:id="@+id/imageView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        app:srcCompat="@drawable/unnamed" />
+        app:srcCompat="@drawable/unnamed"
+        tools:ignore="ContentDescription" />
 
     <EditText
         android:id="@+id/nameEditText"
@@ -33,7 +34,7 @@
         android:textStyle="bold" />
 
     <Spinner
-
+        android:id="@+id/spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content" />
 
@@ -76,6 +77,7 @@
 
         <Button
             android:id="@+id/minusButton"
+            android:onClick="decreaseQuantity"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_below="@id/quantityTitleTextView"
@@ -88,7 +90,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/quantityTitleTextView"
-            android:layout_margin="10dp"
+            android:layout_margin="5dp"
             android:layout_toRightOf="@+id/minusButton"
             android:text="0"
             android:textSize="40sp"
