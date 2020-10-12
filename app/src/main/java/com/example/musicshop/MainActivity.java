@@ -161,16 +161,25 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         //Добавляем ещё данные в обьект
         order.goodsName = goodsName;
         order.quantity = quantity;
+        order.price = price;
         order.orderPrice = quantity * price;
 
         //выводим данные в лог в дебаг режиме, связываем ключ и значение
         Log.d("userName", order.userName);
         Log.d("goodsName", order.goodsName);
         Log.d("quantity", order.quantity + "");
+        Log.d("price", order.price + "");
         Log.d("orderPrice", order.orderPrice + "");
 
         //Запускаем другую активити
         Intent orderIntent = new Intent(MainActivity.this, OrderActivity.class);
+        //передаем данные в новую активити
+        orderIntent.putExtra("userNameForIntent", order.userName);
+        orderIntent.putExtra("goodsNameForIntent", order.goodsName);
+        orderIntent.putExtra("quantityForIntent", order.quantity);
+        orderIntent.putExtra("priceForIntent", order.price);
+        orderIntent.putExtra("orderPriceForIntent", order.orderPrice);
+        //запускаем
         startActivity(orderIntent);
 
     }
