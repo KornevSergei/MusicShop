@@ -70,6 +70,7 @@ public class OrderActivity extends AppCompatActivity {
         intent.putExtra(Intent.EXTRA_SUBJECT, subject);
         //текст пиьсма
         intent.putExtra(Intent.EXTRA_TEXT, emailText);
+        //если нет емейла - то не запускаем
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
 
